@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Streamy</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_video_player">video_player</string>
+    <string name="video_url_extra">video_url</string>
+    <string name="button_text">Stream</string>
+    <string name="input_url_hint">Enter stream url here...</string>
+    <string name="url_invalid_toast">Invalid url ya bum!</string>
+    <string name="url_invalid_toast_https">Streams don\'t work with https urls, try again with http</string>
+    <string name="unsupported_media_error">Media type is unsupported</string>
+    <string name="unknown_media_error">Unknown media error</string>
+    <string name="media_complete">Media complete</string>
+</resources>
