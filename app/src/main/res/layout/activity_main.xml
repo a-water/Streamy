@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,10 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center" >
+        android:gravity="center"
+        android:id="@+id/main_layout">
 
         <EditText
-            android:layout_width="500dp"
+            android:layout_width="600dp"
             android:layout_height="40dp"
             android:id="@+id/url_text_input"
             android:layout_gravity="center_vertical|center_horizontal"
@@ -28,6 +29,17 @@
             android:textColor="@color/backgroundColor"
             android:textAlignment="center" />
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_stream_checkbox"
+            android:id="@+id/save_checkbox"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:checked="false"
+            android:textColor="#808080"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/url_text_input"/>
+
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -37,9 +49,19 @@
             android:background="@drawable/button_drawable"
             android:textColor="#edf1fa"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/url_text_input"/>
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/save_checkbox"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_saved_streams"
+        android:id="@+id/show_saved_stream_button"
+        android:layout_marginBottom="40dp"
+
+        android:layout_gravity="bottom|right"
+        android:textColor="#ffffff" />
+
+</FrameLayout>

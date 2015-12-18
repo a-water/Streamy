@@ -1,6 +1,7 @@
 package com.forfun.streamy;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -9,6 +10,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
@@ -19,7 +22,7 @@ import com.example.aaron.test.R;
 
 import java.io.IOException;
 
-public class videoPlayer extends Activity implements MediaPlayer.OnPreparedListener,
+public class VideoPlayer extends Activity implements MediaPlayer.OnPreparedListener,
         MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener{
 
     String videoUrl;
@@ -58,6 +61,8 @@ public class videoPlayer extends Activity implements MediaPlayer.OnPreparedListe
     @Override
     public boolean onError(MediaPlayer mediaPlayer, int what, int extra) {
 
+        Log.e("VID ERROR", "ERROR: " + what + " " + extra);
+
         if(what == mediaPlayer.MEDIA_ERROR_UNSUPPORTED) {
             Toast.makeText(getApplicationContext(), getString(R.string.unsupported_media_error), Toast.LENGTH_LONG);
             finish();
@@ -84,6 +89,25 @@ public class videoPlayer extends Activity implements MediaPlayer.OnPreparedListe
 
         Toast.makeText(getApplicationContext(), getString(R.string.media_complete), Toast.LENGTH_LONG);
         finish();
+    }
+
+    public static boolean checkForValidUrl(String url, Context context) {
+
+        boolean isValid = true;
+        String toastText = "";
+
+        if(!Patterns.WEB_URL.matcher(url).matches()) {
+            toastText = context.getString(R.string.url_invalid_toast);
+            isValid = false;
+        } else if(url.startsWith("https")) {
+            toastText = context.getString(R.string.url_invalid_toast_https);
+            isValid = false;
+        }
+        if(!isValid) {
+            Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
+        }
+
+        return isValid;
     }
 
 

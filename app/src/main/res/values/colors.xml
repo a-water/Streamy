@@ -7,4 +7,13 @@
     <color name="buttonHighlighted">#992C31</color>
     <color name="buttonSelected">#8F292E</color>
     <color name="backgroundColor">#333a41</color>
+    <color name="deleteBackgroundIdle">#ef5350</color>
+    <color name="deleteBackgroundHighlighted">#970707</color>
+    <color name="deleteBackgroundPressed">#3e2723</color>
+    <color name="streamBackgroundIdle">#42a5f5</color>
+    <color name="streamBackgroundHighlighted">#01579b</color>
+    <color name="streamBackgroundPressed">#263238</color>
+    <color name="savedItemBackgroundIdle">#e5e5e5</color>
+    <color name="savedItemBackgroundHighlighted">#757575</color>
+    <color name="savedItemBackgroundPressed">#616161</color>
 </resources>

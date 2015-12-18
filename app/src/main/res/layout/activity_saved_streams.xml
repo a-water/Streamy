@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.forfun.streamy.MainActivity"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <ListView
+        android:layout_width="800dp"
+        android:layout_height="400dp"
+        android:id="@+id/saved_streams_list"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="#eceff1"
+        android:focusableInTouchMode="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="3.0sp"
+        android:listSelector="@color/savedItemBackgroundPressed"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Done"
+        android:id="@+id/done_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:background="#f3f2f2"
+        android:textColor="#336aa3"
+        android:layout_gravity="right" />
+
+</LinearLayout>

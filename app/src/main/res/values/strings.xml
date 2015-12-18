@@ -10,4 +10,9 @@
     <string name="unsupported_media_error">Media type is unsupported</string>
     <string name="unknown_media_error">Unknown media error</string>
     <string name="media_complete">Media complete</string>
+    <string name="save_stream_checkbox">Save Stream?</string>
+    <string name="list_use">Stream</string>
+    <string name="list_delete">Delete</string>
+    <string name="title_activity_saved_streams">SavedStreamsActivity</string>
+    <string name="show_saved_streams">Show Saved</string>
 </resources>

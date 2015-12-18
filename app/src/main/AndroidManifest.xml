@@ -22,8 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.forfun.streamy.videoPlayer"
+            android:name="com.forfun.streamy.VideoPlayer"
             android:label="@string/title_activity_video_player"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.forfun.streamy.SavedStreamsActivity"
+            android:label="@string/title_activity_saved_streams"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
