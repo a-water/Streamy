@@ -4,15 +4,19 @@
     <string name="title_activity_video_player">video_player</string>
     <string name="video_url_extra">video_url</string>
     <string name="button_text">Stream</string>
-    <string name="input_url_hint">Enter stream url here...</string>
+    <string name="input_url_hint">Enter stream url here&#8230;</string>
     <string name="url_invalid_toast">Invalid url ya bum!</string>
     <string name="url_invalid_toast_https">Streams don\'t work with https urls, try again with http</string>
     <string name="unsupported_media_error">Media type is unsupported</string>
     <string name="unknown_media_error">Unknown media error</string>
+    <string name="unable_to_load_media_error">Unable to load media</string>
     <string name="media_complete">Media complete</string>
     <string name="save_stream_checkbox">Save Stream?</string>
     <string name="list_use">Stream</string>
     <string name="list_delete">Delete</string>
     <string name="title_activity_saved_streams">SavedStreamsActivity</string>
     <string name="show_saved_streams">Show Saved</string>
+    <string name="done_button_text">Done</string>
+    <string name="stream_button_text">Stream</string>
+    <string name="delete_button_text">Delete</string>
 </resources>

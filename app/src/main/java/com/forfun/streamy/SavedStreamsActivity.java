@@ -22,6 +22,7 @@ public class SavedStreamsActivity extends AppCompatActivity {
 
         ListView streamsListView = (ListView) findViewById(R.id.saved_streams_list);
         streamsListView.setAdapter(streamsAdapter);
+        streamsListView.setItemsCanFocus(true);
 
         Button donebutton = (Button) findViewById(R.id.done_button);
         donebutton.setOnClickListener(new View.OnClickListener() {

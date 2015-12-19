@@ -16,21 +16,22 @@
         android:layout_marginTop="50dp"
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="#eceff1"
-        android:focusableInTouchMode="true"
         android:divider="@android:color/transparent"
         android:dividerHeight="3.0sp"
+        android:nextFocusDown="@+id/done_button"
         android:listSelector="@color/savedItemBackgroundPressed"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:text="Done"
+        android:text="@string/done_button_text"
         android:id="@+id/done_button"
+        android:textAllCaps="false"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="15dp"
-        android:background="#f3f2f2"
-        android:textColor="#336aa3"
+        android:background="@drawable/done_button_drawable"
+        android:textColor="@drawable/button_text_color_drawable"
         android:layout_gravity="right" />
 
 </LinearLayout>

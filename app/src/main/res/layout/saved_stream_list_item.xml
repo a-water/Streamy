@@ -22,7 +22,8 @@
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_margin="5dp"
-        android:text="@string/list_delete"
+        android:text="@string/delete_button_text"
+        android:textAllCaps="false"
         android:background="@drawable/delete_button_drawable"
         android:textColor="#ffffff"
         android:textSize="13sp" />
@@ -34,9 +35,9 @@
         android:layout_toStartOf="@id/delete_button"
         android:layout_centerVertical="true"
         android:layout_margin="5dp"
-        android:text="@string/list_use"
+        android:text="@string/stream_button_text"
+        android:textAllCaps="false"
         android:background="@drawable/stream_button_drawable"
-        android:clickable="true"
         android:textColor="#ffffff"
         android:textSize="13sp" />
 
