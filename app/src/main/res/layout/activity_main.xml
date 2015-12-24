@@ -29,16 +29,15 @@
             android:textColor="@color/backgroundColor"
             android:textAlignment="center" />
 
-        <CheckBox
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/save_stream_checkbox"
-            android:id="@+id/save_checkbox"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:checked="false"
-            android:textColor="#808080"
+            android:text="@string/save_stream_switch"
+            android:id="@+id/save_stream_switch"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/url_text_input"/>
+            android:layout_gravity="center_horizontal"
+            android:textColor="#808080"
+            android:checked="false" />
 
         <Button
             android:layout_width="300dp"
@@ -49,8 +48,7 @@
             android:background="@drawable/button_drawable"
             android:textColor="#edf1fa"
             android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/save_checkbox"/>
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 

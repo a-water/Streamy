@@ -7,6 +7,9 @@ import android.widget.Toast;
 
 import com.example.aaron.test.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created by daron on 12/18/15.
  */
@@ -16,7 +19,9 @@ public class VideoPlayerHelper {
 
         Intent videoIntent = new Intent(context, VideoPlayerActivity.class);
 
-        if(!checkForValidUrl(videoUrl, context)) {
+        if(isStreamUpUrl(videoUrl)) {
+            videoUrl = getStreamUpUrl(videoUrl);
+        } else if(!checkForValidUrl(videoUrl, context)) {
             return;
         }
 
@@ -45,6 +50,23 @@ public class VideoPlayerHelper {
         }
 
         return isValid;
+    }
+
+    public static boolean isStreamUpUrl(String url) {
+
+        if(!url.startsWith("http") && (url.contains("-stream") || url.contains("-channel"))) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static String getStreamUpUrl(String channel) {
+
+        String replaceKey = "{{CHANNEL}}";
+        String baseStreamUpUrl = "http://streamup.global.ssl.fastly.net/app/" + replaceKey + "/chunklist.m3u8";
+
+        return baseStreamUpUrl.replace(replaceKey, channel);
     }
 
 }

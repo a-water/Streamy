@@ -2,6 +2,7 @@ package com.forfun.streamy;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.example.aaron.test.R;
@@ -62,6 +63,7 @@ public class StreamSaver {
         return contained;
     }
 
+    @Nullable
     public static ArrayList<String> getSavedStreams(Context context) {
 
         SharedPreferences sharedPrefs = context.getSharedPreferences(SAVED_STREAMS_KEY, Context.MODE_PRIVATE);

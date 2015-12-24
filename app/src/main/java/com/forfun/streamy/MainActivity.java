@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import com.example.aaron.test.R;
 
@@ -55,9 +56,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         EditText urlEditText = (EditText) findViewById(R.id.url_text_input);
         String videoUrl = urlEditText.getText().toString();
 
-        CheckBox checkBox = (CheckBox) findViewById(R.id.save_checkbox);
+        Switch saveSwitch = (Switch) findViewById(R.id.save_stream_switch);
 
-        VideoPlayerHelper.createAndStartVideoIntent(videoUrl, this, checkBox.isChecked());
+        VideoPlayerHelper.createAndStartVideoIntent(videoUrl, this, saveSwitch.isChecked());
     }
 
 }

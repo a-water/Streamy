@@ -61,8 +61,8 @@ public class StreamsArrayAdapter extends BaseAdapter implements ListAdapter {
         deleteButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                list.remove(position);
                 StreamSaver.deleteStream(list.get(position), context);
+                list.remove(position);
                 notifyDataSetChanged();
             }
         });
